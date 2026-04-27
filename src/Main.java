@@ -49,6 +49,20 @@ public class Main {
                         }
                         break;
 
+                    case 3:
+                        System.out.print("Enter student (ID) to update: ");
+                        int studID = sc.nextInt();
+                        sc.nextLine();
+                        System.out.print("Enter the new name to update: ");
+                        String name = sc.nextLine();
+                        if (studentManager.updateStudent(studID, name)) {
+                            System.out.println("Student name updated successfully!");
+                        } else {
+                            System.out.println("Failed updating student name!");
+                        }
+                        break;
+
+
                     case 4:
                         System.out.println("Displaying all students...");
                         System.out.println("\n" + "-".repeat(15) + "\n");

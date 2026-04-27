@@ -9,6 +9,7 @@ public class ConsoleHelper {
     static  {
         options.put(1, "Add Student");
         options.put(2, "Remove Student");
+        options.put(3, "Update Student");
         options.put(4, "Display All Students");
     }
 

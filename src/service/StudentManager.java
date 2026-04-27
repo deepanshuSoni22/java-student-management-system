@@ -26,6 +26,15 @@ public class StudentManager {
         return  false;
     }
 
+    public boolean updateStudent(int id, String name) {
+        if (map.containsKey(id)) {
+            map.get(id).setName(name);
+            return true;
+        }
+
+        return false;
+    }
+
     public Map<Integer, Student> getAllStudents() {
         return Collections.unmodifiableMap(map);
     }
