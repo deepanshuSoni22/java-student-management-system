@@ -8,6 +8,7 @@ public class ConsoleHelper {
     private static Map<Integer, String> options = new HashMap<>();
     static  {
         options.put(1, "Add Student");
+        options.put(2, "Remove Student");
         options.put(4, "Display All Students");
     }
 

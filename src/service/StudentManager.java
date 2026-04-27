@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentManager {
-    private static Map<Integer, Student> map = new HashMap<>();
+    private static final Map<Integer, Student> map = new HashMap<>();
 
     public boolean addStudent(Student s) {
         if (!map.containsKey(s.getId())) {
@@ -16,6 +16,14 @@ public class StudentManager {
         }
 
         return false;
+    }
+
+    public boolean removeStudent(int id) {
+        if (map.containsKey(id)) {
+            map.remove(id);
+            return true;
+        }
+        return  false;
     }
 
     public Map<Integer, Student> getAllStudents() {

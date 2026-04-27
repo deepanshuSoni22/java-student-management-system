@@ -38,6 +38,17 @@ public class Main {
                         }
                         break;
 
+                    case 2:
+                        System.out.print("Enter student id (to remove): ");
+                        int id = sc.nextInt();
+                        sc.nextLine();
+                        if (studentManager.removeStudent(id)) {
+                            System.out.println("Student removed successfully!");
+                        } else {
+                            System.out.println("Failed removing student!");
+                        }
+                        break;
+
                     case 4:
                         System.out.println("Displaying all students...");
                         System.out.println("\n" + "-".repeat(15) + "\n");
